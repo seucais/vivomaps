@@ -158,7 +158,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Campo',
       descricao: 'Sistema para autorização, controle de TPL e emissão de relatórios de intervenção na rede de fibra.',
       status: 'Em Produção',
-      link: 'http://localhost:5173',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3002' : 'https://controledetpl-app.vercel.app',
       tags: ['TPL', 'Planta Externa', 'Relatórios']
     },
     {
@@ -168,7 +168,7 @@ const DADOS_PADRAO = {
       categoria: 'Planta Interna & Proteção',
       descricao: 'Painel em tempo real de tempestades, raios e alertas para proteção das estações e POPs da Vivo.',
       status: 'Em Produção',
-      link: 'http://localhost:5174',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3003' : 'https://meteo-vivosp-app.vercel.app',
       tags: ['Clima', 'Estações', 'Alertas']
     },
     {
@@ -178,7 +178,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Rastreio',
       descricao: 'Mapa interativo para localização de rompimentos de cabo, ocorrências técnicas e geolocalização de equipes.',
       status: 'Em Produção',
-      link: 'http://localhost:5175',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias-app.vercel.app',
       tags: ['Maps', 'Ocorrências', 'Campo']
     },
     {
@@ -188,7 +188,7 @@ const DADOS_PADRAO = {
       categoria: 'Planta Interna & Externa',
       descricao: 'Plataforma para cadastro, gravação de rotas GPS, consulta e controle de cabos de fibra e centrais de backbone.',
       status: 'Em Produção',
-      link: 'http://localhost:5176',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:5176' : 'https://vengeful-smart-cluster-flow.vercel.app',
       tags: ['Cabos', 'Centrais', 'Rotas GPS', 'Backbone']
     }
   ] as Projeto[],
@@ -309,8 +309,32 @@ export default function App() {
   });
 
   const [projetos, setProjetos] = useState<Projeto[]>(() => {
-    const saved = localStorage.getItem('clean_backbone_projetos_v6');
-    return saved ? JSON.parse(saved) : DADOS_PADRAO.projetos;
+    try {
+      localStorage.removeItem('clean_backbone_projetos_v6');
+      const saved = localStorage.getItem('clean_backbone_projetos_v8');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+          return parsed.map(p => {
+            if (p.id === 'controledetpl' || p.nome?.includes('TPL')) {
+              return { ...p, link: isLocal ? 'http://localhost:3002' : 'https://controledetpl-app.vercel.app' };
+            }
+            if (p.id === 'meteo-vivosp' || p.nome?.includes('Meteo')) {
+              return { ...p, link: isLocal ? 'http://localhost:3003' : 'https://meteo-vivosp-app.vercel.app' };
+            }
+            if (p.id === 'vivomaps-ocorrencias' || p.nome?.includes('VivoMaps')) {
+              return { ...p, link: isLocal ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias-app.vercel.app' };
+            }
+            if (p.id === 'backbone-bbr-teste' || p.nome?.includes('Cabos')) {
+              return { ...p, link: isLocal ? 'http://localhost:5176' : 'https://vengeful-smart-cluster-flow.vercel.app' };
+            }
+            return p;
+          });
+        }
+      }
+    } catch (e) {}
+    return DADOS_PADRAO.projetos;
   });
 
   const [metas, setMetas] = useState<Meta[]>(() => {
@@ -330,7 +354,7 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem('clean_backbone_empresa', JSON.stringify(empresa));
-    localStorage.setItem('clean_backbone_projetos_v6', JSON.stringify(projetos));
+    localStorage.setItem('clean_backbone_projetos_v8', JSON.stringify(projetos));
     localStorage.setItem('clean_backbone_metas', JSON.stringify(metas));
     localStorage.setItem('clean_backbone_time_v3', JSON.stringify(time));
     localStorage.setItem('clean_backbone_galeria', JSON.stringify(galeria));
