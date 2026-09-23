@@ -178,7 +178,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Rastreio',
       descricao: 'Mapa interativo para localização de rompimentos de cabo, ocorrências técnicas e geolocalização de equipes.',
       status: 'Em Produção',
-      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias-app.vercel.app',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias.vercel.app/',
       tags: ['Maps', 'Ocorrências', 'Campo']
     },
     {
