@@ -311,7 +311,8 @@ export default function App() {
   const [projetos, setProjetos] = useState<Projeto[]>(() => {
     try {
       localStorage.removeItem('clean_backbone_projetos_v6');
-      const saved = localStorage.getItem('clean_backbone_projetos_v8');
+      localStorage.removeItem('clean_backbone_projetos_v8');
+      const saved = localStorage.getItem('clean_backbone_projetos_v9');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -354,7 +355,7 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem('clean_backbone_empresa', JSON.stringify(empresa));
-    localStorage.setItem('clean_backbone_projetos_v8', JSON.stringify(projetos));
+    localStorage.setItem('clean_backbone_projetos_v9', JSON.stringify(projetos));
     localStorage.setItem('clean_backbone_metas', JSON.stringify(metas));
     localStorage.setItem('clean_backbone_time_v3', JSON.stringify(time));
     localStorage.setItem('clean_backbone_galeria', JSON.stringify(galeria));
