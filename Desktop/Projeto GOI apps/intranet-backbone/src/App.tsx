@@ -158,7 +158,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Campo',
       descricao: 'Sistema para autorização, controle de TPL e emissão de relatórios de intervenção na rede de fibra.',
       status: 'Em Produção',
-      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3002' : 'https://controledetpl-app.vercel.app',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3002' : 'https://controledetpl.vercel.app/',
       tags: ['TPL', 'Planta Externa', 'Relatórios']
     },
     {
