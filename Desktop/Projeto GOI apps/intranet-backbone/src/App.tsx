@@ -158,7 +158,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Campo',
       descricao: 'Sistema para autorização, controle de TPL e emissão de relatórios de intervenção na rede de fibra.',
       status: 'Em Produção',
-      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3002' : 'https://controledetpl.vercel.app/',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3002' : 'https://controledetpl.base44.app',
       tags: ['TPL', 'Planta Externa', 'Relatórios']
     },
     {
@@ -178,7 +178,7 @@ const DADOS_PADRAO = {
       categoria: 'Rede Externa & Rastreio',
       descricao: 'Mapa interativo para localização de rompimentos de cabo, ocorrências técnicas e geolocalização de equipes.',
       status: 'Em Produção',
-      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias.vercel.app/',
+      link: typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias.base44.app',
       tags: ['Maps', 'Ocorrências', 'Campo']
     },
     {
@@ -312,20 +312,21 @@ export default function App() {
     try {
       localStorage.removeItem('clean_backbone_projetos_v6');
       localStorage.removeItem('clean_backbone_projetos_v8');
-      const saved = localStorage.getItem('clean_backbone_projetos_v9');
+      localStorage.removeItem('clean_backbone_projetos_v9');
+      const saved = localStorage.getItem('clean_backbone_projetos_v10_base44');
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
           const isLocal = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
           return parsed.map(p => {
             if (p.id === 'controledetpl' || p.nome?.includes('TPL')) {
-              return { ...p, link: isLocal ? 'http://localhost:3002' : 'https://controledetpl-app.vercel.app' };
+              return { ...p, link: isLocal ? 'http://localhost:3002' : 'https://controledetpl.base44.app' };
             }
             if (p.id === 'meteo-vivosp' || p.nome?.includes('Meteo')) {
               return { ...p, link: isLocal ? 'http://localhost:3003' : 'https://meteo-vivosp-app.vercel.app' };
             }
             if (p.id === 'vivomaps-ocorrencias' || p.nome?.includes('VivoMaps')) {
-              return { ...p, link: isLocal ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias-app.vercel.app' };
+              return { ...p, link: isLocal ? 'http://localhost:3004' : 'https://vivomaps-ocorrencias.base44.app' };
             }
             if (p.id === 'backbone-bbr-teste' || p.nome?.includes('Cabos')) {
               return { ...p, link: isLocal ? 'http://localhost:5176' : 'https://vengeful-smart-cluster-flow.vercel.app' };
@@ -355,7 +356,7 @@ export default function App() {
 
   useEffect(() => {
     localStorage.setItem('clean_backbone_empresa', JSON.stringify(empresa));
-    localStorage.setItem('clean_backbone_projetos_v9', JSON.stringify(projetos));
+    localStorage.setItem('clean_backbone_projetos_v10_base44', JSON.stringify(projetos));
     localStorage.setItem('clean_backbone_metas', JSON.stringify(metas));
     localStorage.setItem('clean_backbone_time_v3', JSON.stringify(time));
     localStorage.setItem('clean_backbone_galeria', JSON.stringify(galeria));
