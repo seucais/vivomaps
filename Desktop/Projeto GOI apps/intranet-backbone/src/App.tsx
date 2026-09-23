@@ -930,6 +930,8 @@ export default function App() {
                 key={iframeKey}
                 src={currentProject.link}
                 title={currentProject.nome}
+                allow="geolocation; camera; microphone; clipboard-write; encrypted-media"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-downloads allow-storage-access-by-user-activation"
                 className="w-full h-[calc(100%-33px)] border-none bg-white dark:bg-slate-950"
               ></iframe>
             </div>
