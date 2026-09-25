@@ -292,12 +292,29 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'area' | 'workspace' | 'projetos' | 'metas' | 'galeria' | 'time'>('area');
   const [activeEmbeddedProject, setActiveEmbeddedProject] = useState<string>('controledetpl');
   const [darkMode, setDarkMode] = useState<boolean>(false);
-  const [isEditMode, setIsEditMode] = useState<boolean>(false);
-  const [modalImage, setModalImage] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [iframeKey, setIframeKey] = useState<number>(0);
-  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [notification, setNotification] = useState<string | null>(null);
+  const [showAuthModal, setShowAuthModal] = useState<boolean>(false);
+  const [authForm, setAuthForm] = useState({ usuario: '', senha: '' });
+  const [authError, setAuthError] = useState<string | null>(null);
+  const galeriaFileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleGaleriaFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const nova: ItemGaleria = {
+          id: `gal_${Date.now()}`,
+          titulo: file.name.replace(/\.[^/.]+$/, ""),
+          categoria: "Campo",
+          url: event.target?.result as string,
+          data: "Set 2026"
+        };
+        setGaleria([nova, ...galeria]);
+        showNotification("Foto adicionada à Galeria com sucesso!");
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   // Carrossel
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(0);
@@ -554,17 +571,23 @@ export default function App() {
             {/* BOTÃO MODO EDIÇÃO */}
             <button
               onClick={() => {
-                setIsEditMode(!isEditMode);
-                showNotification(isEditMode ? "Modo Edição desativado." : "Modo Edição ativado!");
+                if (isEditMode) {
+                  setIsEditMode(false);
+                  showNotification("Modo Edição desativado.");
+                } else {
+                  setAuthForm({ usuario: '', senha: '' });
+                  setAuthError(null);
+                  setShowAuthModal(true);
+                }
               }}
               className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${
                 isEditMode
                   ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700'
               }`}
-              title="Ativar/Desativar edição de conteúdo"
+              title="Ativar/Desativar edição de conteúdo (Requer Autenticação)"
             >
-              <Edit3 className="w-3.5 h-3.5" />
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-500" />
               <span>{isEditMode ? 'Edição Ativa' : 'Editar Conteúdo'}</span>
             </button>
 
@@ -1181,30 +1204,49 @@ export default function App() {
         {/* ================= ABA: GALERIA DO TIME ================= */}
         {activeTab === 'galeria' && (
           <div className="space-y-4 animate-in fade-in duration-200">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h2 className="text-base font-semibold text-slate-900 dark:text-white">Galeria do Backbone</h2>
                 <p className="text-xs text-slate-500">Fotos de campo, estações técnicas e equipe.</p>
               </div>
 
-              {isEditMode && (
-                <button 
-                  onClick={() => {
-                    const nova: ItemGaleria = {
-                      id: `foto_${Date.now()}`,
-                      titulo: "Nova Foto",
-                      categoria: "Eventos",
-                      url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
-                      data: "2026"
-                    };
-                    setGaleria([...galeria, nova]);
-                    showNotification("Foto adicionada!");
-                  }}
-                  className="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-medium text-xs flex items-center gap-1"
+              <div className="flex items-center gap-2">
+                <input
+                  type="file"
+                  ref={galeriaFileInputRef}
+                  onChange={handleGaleriaFileUpload}
+                  accept="image/*"
+                  className="hidden"
+                />
+
+                <button
+                  onClick={() => galeriaFileInputRef.current?.click()}
+                  className="px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition cursor-pointer"
+                  title="Upload de foto do computador ou câmera"
                 >
-                  <Plus className="w-3.5 h-3.5" /> Adicionar Foto
+                  <Upload className="w-3.5 h-3.5 text-violet-200" />
+                  <span>Upload de Foto</span>
                 </button>
-              )}
+
+                {isEditMode && (
+                  <button 
+                    onClick={() => {
+                      const nova: ItemGaleria = {
+                        id: `foto_${Date.now()}`,
+                        titulo: "Nova Foto",
+                        categoria: "Eventos",
+                        url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+                        data: "2026"
+                      };
+                      setGaleria([...galeria, nova]);
+                      showNotification("Foto adicionada!");
+                    }}
+                    className="px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-medium text-xs flex items-center gap-1"
+                  >
+                    <Plus className="w-3.5 h-3.5" /> Adicionar URL
+                  </button>
+                )}
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1689,6 +1731,92 @@ export default function App() {
               <X className="w-4 h-4" />
             </button>
             <img src={modalImage} alt="Foto" className="w-full max-h-[75vh] object-contain rounded-xl" />
+          </div>
+        </div>
+      {/* MODAL DE AUTENTICAÇÃO REQUERIDA PARA EDIÇÃO DE CONTEÚDO */}
+      {showAuthModal && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 border border-slate-200 dark:border-slate-800 shadow-2xl relative space-y-4">
+            <button 
+              onClick={() => setShowAuthModal(false)}
+              className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 dark:hover:text-white"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="w-10 h-10 rounded-2xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="font-bold text-sm text-slate-900 dark:text-white">Autenticação Requerida</h3>
+                <p className="text-[11px] text-slate-500">Digite seu usuário e senha para editar o conteúdo.</p>
+              </div>
+            </div>
+
+            {authError && (
+              <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 text-xs font-semibold border border-rose-200 dark:border-rose-800">
+                ⚠️ {authError}
+              </div>
+            )}
+
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                const u = authForm.usuario.trim();
+                const s = authForm.senha.trim();
+                if (u === 'BackboneSPC' && s === 'BackboneSPC') {
+                  setIsEditMode(true);
+                  setShowAuthModal(false);
+                  showNotification("Autenticação aceita! Modo Edição ativado.");
+                } else {
+                  setAuthError("Usuário ou senha incorretos! (Padrão: BackboneSPC / BackboneSPC)");
+                }
+              }}
+              className="space-y-3"
+            >
+              <div>
+                <label className="text-[11px] font-bold uppercase text-slate-500 block mb-1">Usuário *</label>
+                <input
+                  type="text"
+                  placeholder="Ex: BackboneSPC"
+                  value={authForm.usuario}
+                  onChange={(e) => setAuthForm({ ...authForm, usuario: e.target.value })}
+                  className="w-full px-3 py-2 text-xs border rounded-xl dark:bg-slate-800 dark:border-slate-700 dark:text-white font-semibold"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="text-[11px] font-bold uppercase text-slate-500 block mb-1">Senha *</label>
+                <input
+                  type="password"
+                  placeholder="••••••••"
+                  value={authForm.senha}
+                  onChange={(e) => setAuthForm({ ...authForm, senha: e.target.value })}
+                  className="w-full px-3 py-2 text-xs border rounded-xl dark:bg-slate-800 dark:border-slate-700 dark:text-white font-semibold"
+                  required
+                />
+              </div>
+
+              <div className="pt-2 flex items-center justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowAuthModal(false)}
+                  className="px-3 py-2 text-xs font-semibold text-slate-500 hover:text-slate-700"
+                >
+                  Cancelar
+                </button>
+
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs rounded-xl shadow-xs transition flex items-center gap-1.5"
+                >
+                  <Check className="w-4 h-4" />
+                  <span>Entrar e Editar</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
