@@ -600,8 +600,8 @@ export default function App() {
         </div>
       )}
 
-      {/* MOBILE NAV TAB BAR */}
-      <div className="md:hidden flex overflow-x-auto bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-2 gap-1">
+      {/* MOBILE NAV TAB BAR (TOP QUICK BAR) */}
+      <div className="md:hidden flex overflow-x-auto bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 p-2 gap-1.5 scrollbar-none snap-x sticky top-[60px] z-30">
         {[
           { id: 'area', label: 'Nossa Área' },
           { id: 'workspace', label: 'Apps Embutidos 🟣' },
@@ -613,10 +613,10 @@ export default function App() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id as any)}
-            className={`px-2.5 py-1 rounded-md text-xs font-semibold whitespace-nowrap transition ${
+            className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition snap-start active:scale-95 ${
               activeTab === tab.id
                 ? 'bg-violet-600 text-white dark:bg-violet-500 dark:text-white shadow-xs'
-                : 'text-slate-500 dark:text-slate-400'
+                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
             }`}
           >
             {tab.label}
@@ -625,7 +625,7 @@ export default function App() {
       </div>
 
       {/* ÁREA DE CONTEÚDO PRINCIPAL */}
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
+      <main className="flex-1 max-w-6xl w-full mx-auto px-3 sm:px-6 py-4 sm:py-6 space-y-4 sm:space-y-6 pb-24 md:pb-6">
 
         {/* ================= ABA: NOSSA ÁREA ================= */}
         {activeTab === 'area' && (
@@ -912,18 +912,21 @@ export default function App() {
 
             {/* IFRAME CONTAINER INTEGRADO */}
             <div className={`relative rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0f172a] shadow-sm transition-all duration-200 ${
-              isFullscreen ? 'fixed inset-3 z-50 border-2 border-slate-800 dark:border-slate-200 shadow-2xl' : 'h-[680px] w-full'
+              isFullscreen ? 'fixed inset-0 sm:inset-3 z-50 border-0 sm:border-2 border-slate-800 dark:border-slate-200 shadow-2xl rounded-none sm:rounded-xl' : 'h-[75vh] sm:h-[680px] w-full'
             }`}>
               
               <div className="bg-slate-100 dark:bg-slate-950 px-3 py-2 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span>
-                  <span className="font-semibold text-slate-700 dark:text-slate-300">{currentProject.nome}</span>
-                  <span className="text-[11px] text-slate-400 font-mono">({currentProject.link})</span>
+                <div className="flex items-center gap-2 truncate pr-2">
+                  <span className="w-2 h-2 rounded-full bg-violet-500 shrink-0 animate-pulse"></span>
+                  <span className="font-semibold text-slate-700 dark:text-slate-300 truncate">{currentProject.nome}</span>
                 </div>
-                {isFullscreen && (
-                  <button onClick={() => setIsFullscreen(false)} className="text-xs text-rose-500 font-semibold">
-                    Fechar Tela Cheia [Esc]
+                {isFullscreen ? (
+                  <button onClick={() => setIsFullscreen(false)} className="px-2 py-1 rounded bg-rose-500 text-white text-[11px] font-bold shrink-0">
+                    ✕ Fechar Tela Cheia
+                  </button>
+                ) : (
+                  <button onClick={() => setIsFullscreen(true)} className="sm:hidden px-2 py-1 rounded bg-violet-600 text-white text-[11px] font-bold shrink-0">
+                    ⛶ Expandir Tela
                   </button>
                 )}
               </div>
@@ -934,7 +937,7 @@ export default function App() {
                 title={currentProject.nome}
                 allow="geolocation; camera; microphone; clipboard-write; encrypted-media"
                 sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals allow-downloads allow-storage-access-by-user-activation"
-                className="w-full h-[calc(100%-33px)] border-none bg-white dark:bg-slate-950"
+                className="w-full h-[calc(100%-35px)] border-none bg-white dark:bg-slate-950"
               ></iframe>
             </div>
 
@@ -1691,7 +1694,7 @@ export default function App() {
       )}
 
       {/* FOOTER CLEAN COM ROXO VIVO */}
-      <footer className="mt-auto bg-white dark:bg-[#0f172a] border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-400">
+      <footer className="mt-auto bg-white dark:bg-[#0f172a] border-t border-slate-200 dark:border-slate-800 py-4 text-center text-xs text-slate-400 pb-20 md:pb-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-violet-600 to-purple-700 text-white font-bold flex items-center justify-center text-xs shadow-xs">
@@ -1703,6 +1706,40 @@ export default function App() {
           <p>© 2026 {empresa.nomeEmpresa}. Todos os direitos reservados.</p>
         </div>
       </footer>
+
+      {/* DOCK BAR DE NAVEGAÇÃO MOBILE (NATIVE APP FEEL) */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-2 py-1.5 flex items-center justify-around shadow-2xl">
+        {[
+          { id: 'area', label: 'Área', icon: Building2 },
+          { id: 'workspace', label: 'Apps 🟣', icon: Grid, isLive: true },
+          { id: 'projetos', label: 'Projetos', icon: FolderKanban },
+          { id: 'metas', label: 'Metas', icon: Target },
+          { id: 'galeria', label: 'Galeria', icon: ImageIcon },
+          { id: 'time', label: 'Time', icon: Users }
+        ].map(tab => {
+          const Icon = tab.icon;
+          const isActive = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id as any)}
+              className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all relative cursor-pointer active:scale-90 ${
+                isActive
+                  ? 'text-violet-600 dark:text-violet-400 font-bold'
+                  : 'text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-medium'
+              }`}
+            >
+              <div className="relative">
+                <Icon className={`w-5 h-5 ${isActive ? 'text-violet-600 dark:text-violet-400 scale-110' : ''}`} />
+                {tab.isLive && (
+                  <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-violet-500 animate-pulse"></span>
+                )}
+              </div>
+              <span className="text-[10px] mt-0.5 tracking-tight font-sans">{tab.label}</span>
+            </button>
+          );
+        })}
+      </div>
 
     </div>
   );
