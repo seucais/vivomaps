@@ -1,0 +1,33 @@
+{
+  "name": "Resident",
+  "type": "object",
+  "properties": {
+    "cluster_key": {
+      "type": "string",
+      "description": "Cluster key"
+    },
+    "central": {
+      "type": "string",
+      "description": "Sigla da central"
+    },
+    "nome": {
+      "type": "string",
+      "description": "Nome do residente"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ativo",
+        "ferias",
+        "afastado"
+      ],
+      "description": "Status do residente"
+    }
+  },
+  "required": [
+    "cluster_key",
+    "central",
+    "nome",
+    "status"
+  ]
+}

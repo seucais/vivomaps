@@ -1,0 +1,38 @@
+{
+  "name": "Cluster",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Unique slug identifier (e.g. guarulhos, leste)"
+    },
+    "label": {
+      "type": "string",
+      "description": "Display name"
+    },
+    "centrais": {
+      "type": "string",
+      "description": "Centrais ativas"
+    },
+    "armarios": {
+      "type": "string",
+      "description": "Arm\u00e1rios de distribui\u00e7\u00e3o"
+    },
+    "tecnicos": {
+      "type": "string",
+      "description": "T\u00e9cnicos alocados"
+    },
+    "volume": {
+      "type": "string",
+      "description": "Volume de TAs (chamados no m\u00eas)"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order"
+    }
+  },
+  "required": [
+    "key",
+    "label"
+  ]
+}

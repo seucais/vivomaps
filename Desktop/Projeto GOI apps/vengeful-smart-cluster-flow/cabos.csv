@@ -1,0 +1,128 @@
+﻿CIDADE,CABO,PONTA A,PONTA B,CAP,KM,DERIVACAO,PRIORITARIAS,OBSERVACAO,DRACO,KMZ,..PowerAppsId..,__PowerAppsId__
+BERTIOGA,TR102,BERT.BT,BERT.VA,72,8234,,,"◾BERT.BT DWDM PADTEC 004.1 DIREÇÃO BERT.JI- CABO 102, FIBRAS: 65 e 66.  ◾BERT.BT DWDM PADTEC 002.1 DIREÇÃO MCZ.JP CABO 102, FIBRA 62  Tronco 83 FIBRA 02  ◾BERT.BT DWDM HUAWEI 1000 DIREÇÃO MCZ.JP CABO 102, FIBRAS: 31 e 32  ◾BERT.BT DWDM HUAWEI 0001 DIREÇÃO BERT.VA CABO 102, FIBRAS: 05 e 06",7,indisponivel no momento,,Gs7aqk_s3J8
+BERTIOGA,TR19,BERT.BT,BERT.RL,12,19454,DESATIVADO,,,1,indisponivel no momento,,jre97GLZlUs
+BERTIOGA,TR83,BERT.BT,BERT.RL,36,19832,,,,34,indisponivel no momento,,BjVcMC4wCUw
+BERTIOGA,TR32,BERT.RL,BERT.PG,36,13324,,,,17,indisponivel no momento,,zz1v13SZKec
+BERTIOGA,TR32,BERT.PG,BERT.PB,36,7546,,,,5,indisponivel no momento,,LtL_VfjQock
+BERTIOGA,TR79,BERT.PG,SST,36,4932,,,,14,indisponivel no momento,,OFriVziuA7k
+BERTIOGA,TR1345,BERT.JI,MCZ.BU,36,,01-12,1/ 2 DWDM HUAWEI - 3/4 DWDM PADTEC - 11/12 SWAP OI,,8,indisponivel no momento,,tGQ_ZWPd3UE
+BERTIOGA,TR2017,BERT.VA,BERT.JI,36,5302,,,,9,indisponivel no momento,,Wtt_aciGxw4
+CANANEIA,TR88,CEY.AR,CEY.RD1,12,1041,,,,,indisponivel no momento,lB02GPubt3E,c5oQrvNgkxk
+CANANEIA,TR49,CEY.TL,CEY.RD2,12,1767,,,,,indisponivel no momento,V4YdOyi6g54,cjld1dfdAjc
+CUBATAO,TR52,CAO.VF,CAO.SJ,36,6511,,,,11,indisponivel no momento,,fGT2OyiVQjM
+CUBATAO,TR51,CAO.DI,CAO.SJ,72,8359,*01-36,,,12,indisponivel no momento,,__5N6vpzo9o
+CUBATAO,TR15,CAO.JC,CAO.SJ,12,5934,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,Gmp63jCHn3k
+CUBATAO,TR73,CAO.SJ,GJA.VC,36,29827,NAO,*Prioritárias* 01 e 02 05 e 06 15 e 16 29 e 30 - DWDM 02 e 35 - DWDM,2 DWDM / 10 SDH / 7 HL4,12,https://www.google.com/maps/d/edit?mid=1K8y6GmA1gB751XmWuklOQCL_puUIprw&usp=sharing,,Z-qteVtpiPo
+CUBATAO,TR1808,CAO.SJ,STS.WL,24,19827,,,Lado Santos FL:19~20 - BT:26~30 - BD:04 e 05. Terceiro andar.,Cabo não encontrado na Monitoração,indisponivel no momento,,TBbeOkqUpSw
+ELDORADO,TR86,ELD.BA,ELD.IA,12,14676,,,test,Cabo não encontrado na Monitoração,indisponivel no momento,4bYaeW0kFQM,W9sSgic1pbU
+ELDORADO,RADIO,ELD.IA,ELD.SG,-,,,,,Cabo não encontrado na Monitoração,indisponivel no momento,yJA2uNL7DaM,1VrDsEQTWvo
+GUARUJA,TR110,GJA.VC,GJA.SA,72,8432,,,,,indisponivel no momento,,fDL2n3IzXNM
+GUARUJA,TR38,GJA.VC,GJA.SA,36,7911,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,GXuYPb7bidw
+GUARUJA,TR64,GJA.VC,GJA.JV,36,14233,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,1gKHin7zKKI
+GUARUJA,TR12,GJA.SA,GJA.AS,12,3934,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,4stJpaIp3AI
+GUARUJA,TR74,GJA.SA,GJA.AS,72,4233,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,jZfr5y4eY7s
+GUARUJA,TR11,GJA.SA,GJA.SR,12,4743,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,YI58K2uPlYY
+GUARUJA,TR63,GJA.AS,GJA.SR,36,3146,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,BG5VrEOOJnY
+GUARUJA,TR109,GJA.SA,GJA.JV,72,4951,,,,11,https://www.google.com/maps/d/edit?mid=1zNQa5t1H7EtB5aHvZ_ocZTQ9Vo0LfZA&usp=sharing,,MJzT1CUZM4I
+GUARUJA,TR28,GJA.SA,GJA.JV,36,4774,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,zEzqVCmo6ws
+GUARUJA,TR17,GJA.SA,GJA.MT,12,4756,,,,3,indisponivel no momento,,LeIIAhc9tv4
+GUARUJA,TR126,GJA.JV,GJA.EN,72,8342,,,,,indisponivel no momento,,WTscB6Vz3rY
+GUARUJA,TR112,GJA.JV,GJA.EN,72,8257,,,,11,indisponivel no momento,,93L1owU2Tu4
+GUARUJA,TR72,GJA.JV,GJA.EN,72,8134,,,,9,indisponivel no momento,,eYcbc5dcA9o
+GUARUJA,TR27,GJA.JV,GJA.EN,12,8197,,,,11,indisponivel no momento,,szt3YVLQQP4
+GUARUJA,TR113,GJA.EN,GJA.IP,72,13543,,01/02 - 17/18 - 29/30 - 35/36,,35,indisponivel no momento,,BjenNL-EzdA
+GUARUJA,TR80,GJA.EN,BERT.BT,36,22537,,,,,indisponivel no momento,,NsNJhv16JK0
+ITANHAEM,TR122,INE.GT,INE.JG,72,5105,,,,12,indisponivel no momento,1U.fEoJBSrY,ACH13gEAklE
+ITANHAEM,TR37.1,INE.GT,INE.JG,36,4940,,,,24,indisponivel no momento,uCd2gmvQEWA,BdmymwBYRa4
+ITANHAEM,TR121,INE.JG,INE.BC,72,7840,,,,,indisponivel no momento,tli4XV5atsQ,TYOlEL8182c
+ITANHAEM,TR57,INE.JG,INE.BC,36,7140,,,,19,indisponivel no momento,Bjx.zPnBZII,1ycIe0vnuXI
+ITANHAEM,TR14,INE.JG,INE.BC,12,7598,,,,Cabo não encontrado na Monitoração,indisponivel no momento,34DCMOn6iTQ,0XVgnDvcABQ
+ITANHAEM,TR120,INE.BC,INE.SU,72,6700,,,,12,indisponivel no momento,tmx.7zbZ7cM,gs4Y00J0_1A
+ITANHAEM,TR30,INE.BC,INE.SU,36,6230,,,,,indisponivel no momento,Z3raF8kcmnU,ZHA_xf1Z9K4
+ITANHAEM,TR119,INE.SU,MGG.AC,72,7000,,,,12,indisponivel no momento,ZEmhYwKQJME,Diz4DVyy60A
+ITANHAEM,TR36,INE.SU,MGG.AC,36,6311,,,,19,indisponivel no momento,KfS1Ce-VIes,Z-ealoUgZ0w
+ITARIRI,TR346,IRY.MS,IRY.AD,36,17000,,,,,https://www.google.com/maps/d/edit?mid=1bOnukA2IDgE-cF44HuJiPxo23da8MK4&ll=-24.29671732147294%2C-47.121066799999994&z=14,ZWdoDA9Op-4,oiM17MWk7mQ
+ITARIRI,TR345,IRY.AD,PUE.PA,36,11000,,,,36,indisponivel no momento,b5hHT2KkV3I,irs5efo-SlA
+JACUPIRANGA,TR97,JCP.DC,PQU.RM,72,,,05/06 - 11/12 - 13/14 ,,9,indisponivel no momento,b7E9r3VLUHk,RPA3WwqBTAw
+JUQUIA,TR60,JUQ.BR,MIU.BI,,17216,,,,Cabo não encontrado na Monitoração,indisponivel no momento,u70hMJtBstI,7lBC_sRbgyc
+MIRACATU,TR349,MIU.MA,MIU.PB,12,12030,25-36,,,,indisponivel no momento,Btn5A-51WmQ,QO_ScID36Oc
+MIRACATU,TR60,MIU.BI,MIU.MA,,7934,,,,1,indisponivel no momento,hSEM70nrRhA,DbJRkC8jhio
+MONGAGUA,TR118,MGG.AC,MGG.SP,72,8510,,,,12,indisponivel no momento,17ttXwj8.TQ,VD21LbiWF1I
+MONGAGUA,TR53,MGG.AC,MGG.SP,36,7915,,,,14,indisponivel no momento,YuNeZldMfQ4,ykkNfWY5Rf8
+MONGAGUA,TR07,MGG.AC,MGG.SP,12,7934,,,,11,indisponivel no momento,T0-pldcVUss,MG4OfZ1_xY8
+MONGAGUA,TR117,MGG.SP,PGE.SL,72,5120,,,,12,indisponivel no momento,Agx.Ro8d0Xo,yeEhZIM2n90
+MONGAGUA,TR46,MGG.SP,PGE.SL,36,4820,,,,23,indisponivel no momento,fIMgL45xeDI,Pk-xp3EcW4Y
+MONGAGUA,TR06,MGG.SP,PGE.SL,12,4871,,,,15,indisponivel no momento,OULYEn2qsoo,TqQ4U76-ZJQ
+PARIQUERA-ACU,TR48,PQU.RD,PQU.RM,48,17737,,,,5,indisponivel no momento,xKv9GCxOoxI,XIlmwK9NQ0U
+PARIQUERA-ACU,TR1458,PQU.RM,IGP.AB,36,49134,,,,,indisponivel no momento,05oD5aTi9Y8,BFzZXA3EQ0A
+PEDRO DE TLEDO,TR348,PDT.RJ,MIU.PB,36,25683,01-24,,,28,https://www.google.com/maps/d/edit?mid=1M4EI5jvt8LiJ862js9nIiqXUmnFg4BE&usp=sharing,r6sTw3GRtaQ,cyrHU8rgSwE
+PEDRO DE TOLEDO,TR347,PDT.RJ,IRY.MS,36,7900,,,,36,https://www.google.com/maps/d/edit?mid=17e4SJLQ5zkSAXNhZ_RmMQPistUG5Kp8&usp=sharing,0zuC-Dd94Qg,DwLVmW-Cfsk
+PERUIBE,TR75,PUE.PA,PUE.SO,36,5308,,,,25,indisponivel no momento,mEeLCZiRxbA,B0Z1EJ0Ed-g
+PERUIBE,TR124,PUE.PA,PUE.SO,72,5630,,,,12,indisponivel no momento,wZkfQ7C6jyo,-IN3pkLSS-k
+PERUIBE,TR123,PUE.SO,INE.GT,72,16000,,,,1,indisponivel no momento,.tyRusJvqII,6U0yIrB2h2w
+PERUIBE,TR37.2,PUE.SO,INE.GT,36,18246,,,,24,indisponivel no momento,.kHszHxiLno,GJ37xxKQFOs
+PRAIA GRANDE,TR116,PGE.SL,PGE.VC,72,8000,,DWDM 0006.1 (HUAWEI) PGE. VC / PGE.SL (NOVO QUARTO) Identificação 5532  D: FL.15 / BT. 37-41 / SUB. 1 / FIU SLOT 07 P: FL. 24 / BT. 75-79 / BJ. 19 / POS. 03 / 04 TRONCO 116 FB. 03 / 04,,12,indisponivel no momento,L9uau1.2MV4,--IvNYIAfSo
+PRAIA GRANDE,TR47,PGE.VC,PGE.SL,36,7393,,DWDM 0005 (HUAWEI) PGE. VC / SENTIDO INE. BC (SALA VELHA) Identificação 4770  D: FL.2A / BT.37-41 / SUB1 / SLOT 5 FIU IN / OUT P: FL. 01 / BT. 22 / POS. B. 09 / 10 CABO 47 FB. 21 / 22 __ DWDM 0001.1 (SIEMENS) PGE. VC / INE. BC (SALA NOVA)  D: FL.15 / BT. 12-16 / RANHURA 104 ENTRADAS / 107 SAÍDAS P: FL. 24 / BT. 70-74 / BJ. 10 / POS. 09 / 10 (SALA NOVA) P: FL. 01 / BT. 34A-38A / BJ.17 / FB. 09 / 10 (SALA VELHA) P: FL. 01 / BT. 22 / MOD. C / FB. 25/26 (SALA VELHA) TRONCO 47 FB. 25 / 26 ,,29,indisponivel no momento,m96rq-xgrA0,TWH39NIEzWc
+PRAIA GRANDE,TR05,PGE.SL,PGE.VC,12,7201,,,,,indisponivel no momento,DOqS6B8b0n8,393B8ckjdO0
+PRAIA GRANDE,TR87,PGE.VC,SPO.JBQ,72,,,DWDM 1001.1 (HUAWEI) PGE. VC / SPO. JB (SALA NOVA) Identificação 4828  D: FL.13 / BT. 12-16 / SUB. 1 / FIU IN/OUT P: FL. 24 / BT. 70-74 / BJ. 10 / POS. 07 / 08 CABO 87 FB. 62 / 63__DWDM 101.1 (HUAWEI) PGE. VC / SPO.CO  (SALA VELHA) Identificação 1076  D: FL.1 / BT. 27-31 / SUB.1 / SLOT 09 / ENTRADA / SAÍDA FIU P: FL. 09 / BT. 17 / MOD. E / FB. 53 / 54 (SALA VELHA) CABO 87 FB. 53 / 54,,33,https://www.google.com/maps/d/edit?mid=1K8y6GmA1gB751XmWuklOQCL_puUIprw&usp=sharing,,tmgpHwP2bOs
+PRAIA GRANDE,TR60,PGE.VC,MGG.SP,72,12412,49-72,66,59/60/,Cabo não encontrado na Monitoração,indisponivel no momento,,pFCK8225OPw
+PRAIA GRANDE,TR41,PGE.VC,CAO.SJ,72,29730,,DWDM ZTE (05/06) - SDH ALCATEL(12) - SDH ALCATEL(29/30) - DWDM 10001(44/57) - SDH ALCATEL(49/67) - SDH ALCATEL(55/56) - SDH ALCATEL(61/67) - MODEM OPTICO(63/64),,36,https://www.google.com/maps/d/edit?mid=1JmhFk_gsFPA5h8bzvwSR_qoan1P0uqk&usp=sharing,,emG6R9FlLUE
+PRAIA GRANDE,TR95,PGE.VC,SVE.PD,72,11580,,,,1,indisponivel no momento,,d1MWuIrWj5s
+PRAIA GRANDE,TR40,PGE.VC,STS.WL,72,31636,,,07;08;41;48;55;56,62,indisponivel no momento,,UhlPBv7OVek
+PRAIA GRANDE,TR.MOVEL,PGE.VC,ERB MOVEL,12,2300,,,,,indisponivel no momento,,uUZ07fR7HRs
+PRAIA GRANDE,TR115,PGE.VC,PGE.CO,72,8210,,DWDM 001.1 (ZTE) PGE. VC / PGE. SS  (SALA NOVA)  D: FL. 22 / BT. 01-21 / SUB. 1 / SLOT 4 OUT / SLOT 21 IN  P: FL. 24 / BT. 75-79 / BJ. 16 / POS. 47 / 48 TRONCO 115 FB. 47 / 48__DWDM 102.1 (HUAWEI) PGE. VC / STS. WL (SALA VELHA) Identificação 1079  D: FL.2 / BT. 27-31 / SUB.1 / SLOT 05 / ENTRADA / SAÍDA FIU P: FL.1 / BT. 32B-33B / MOD. E 09 / 10 (SALA VELHA) P: FL.24 / BT. 75-79 / BJ.17 / FB. 09 / 10 (SALA NOVA) P: FL.24 / BT. 85-89 / BJ.11 / FB. 55/56 (SALA NOVA) TRONCO 115 FB. 55 / 56,,50,indisponivel no momento,,CSqAFSDvQD8
+PRAIA GRANDE,TR92,PGE.VC,PGE.CO,72,7760,,DWDM 0003.1 (HUAWEI) PGE. VC / PGE.CO (QUARTO NOVO) Identificação 4771  D: FL.15 / BT. 07-11 / SUB.1 / SLOT 05 / FIU IN/OUT P: FL.24 / BT. 70-74 / BJ. 18 / POS. 01 / 02 (SALA NOVA) P: FL.24 / BT. 75-79 / BJ. 01 / FB. 03 / 04 (SALA NOVA) TRONCO 92 FB. 03 / 04 __ DWDM 0002.0 (SIEMENS) PGE. VC / SENTIDO STS. WL (SALA VELHA)  D: FL.1 / BT. 39-42 / SLOT 107 ENTRADA/SAÍDA P: FL. 1-2 / BT. 32B-33B / MOD. F/POS. 07/08 (SALA VELHA) P: FL. 24 / BT. 85-89 / BJ. 12 / POS. 07 / 08 (SALA NOVA) P: FL. 24 / BT. 75-79 / BJ. 05 / FB. 53 / 54 (SALA NOVA) TRONCO 92 FB. 53 / 54 __ DWDM 0002.1 (SIEMENS) PGE. VC / SENTIDO STS. WL (SALA NOVA)  D: FL.15 / BT. 17-21 / RANHURA 111 ENTRADAS / 114 SAÍDAS P: FL. 24 / BT. 75-79 / BJ. 05 / POS. 51 / 52 (SALA NOVA) TRONCO 92 FB. 51 / 52,,36,indisponivel no momento,,qP2TrPvaRHs
+PRAIA GRANDE,TR04,PGE.VC,PGE.CO,12,7124,,,,29,indisponivel no momento,,ejk_ZztnkUY
+PRAIA GRANDE,TR71,PGE.VC,STS.WL,72,29847,01 - 36,DWDM 1001.2 (HUAWEI) PGE. VC / STS. WL (SALA NOVA) Identificação 4830  D: FL.13 / BT. 17-21 / SUB. 1 / ENTRADA / SAÍDA FIU P: FL. 24 / BT. 70-74 / BJ. 11 / POS. 05 / 06 CABO 71 FB. 21 / 22__DWDM 0001.1 (HUAWEI) PGE. VC / STS. WL (SALA VELHA)  D: FL.1A / BT. 37-41 / SUB.1 / SLOT 5 FIU IN/OUT P: FL. ? CABO 71 FB. 15 / 16,,19,indisponivel no momento,,b4nnZcaMcfY
+PRAIA GRANDE,TR114,PGE.CO,PGE.AV,72,4743,,,,50,indisponivel no momento,,WVSO5hVsvQ4
+PRAIA GRANDE,TR91,PGE.CO,PGE.AV,72,5000,,,,36,indisponivel no momento,,FSd__n5grGo
+PRAIA GRANDE,TR105,PGE.AV,PGE.SS,72,4713,,,,50,indisponivel no momento,,5YocAkVFPm8
+PRAIA GRANDE,#01,PGE.AV,PGE.SS,12,4253,,,,,indisponivel no momento,,ALRVP4fET8U
+PRAIA GRANDE,TR02,PGE.SS,SVE.JR,36,8530,,,,30,indisponivel no momento,,bGaeuHFAj80
+PRAIA GRANDE,TR106,PGE.SS,SVE.JP,72,5702,,,,63,indisponivel no momento,,Fy22bxup25I
+PRAIA GRANDE,TR60,PGE.VC,RGT.CG,72,12412,01-48,27/28,26/26/,Cabo não encontrado na Monitoração,indisponivel no momento,,VvDcTj1ku50
+PRAIA GRANDE,TR71,PGE.VC,PGE.CO,72,,27 - 72,,39/40/41/42/68/72,Cabo não encontrado na Monitoração,indisponivel no momento,,Y4Wkce6snn8
+REGISTRO,TR56,RGT.CA,RGT.CG,12,3945,,,precisa fazer melhorias,10,indisponivel no momento,5CIDGrEzdXg,xKB6__u4GyA
+REGISTRO,TR60,RGT.CG,RGT.SE,72,17636,67-72,,,Cabo não encontrado na Monitoração,indisponivel no momento,EU4ZN8TOgaw,bp7q16uR270
+SANTOS,TR06,STS.JM,STS.TO,36,2439,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,40dMrbd2b7I
+SANTOS,TR09,STS.WL,STS.JM,36,2640,,,,,indisponivel no momento,,dw-c8q8un80
+SANTOS,TR10,STS.WL,STS.PP,72,4102,,,,,indisponivel no momento,,jdpSuuSCBVA
+SANTOS,TR108,STS.PT,STS.WL,144,3142,,,,141,indisponivel no momento,,beEmfbC4b3c
+SANTOS,TR13,STS.AB,SVE.JR,24,5239,,,,18,indisponivel no momento,,hxf7iXBFRYg
+SANTOS,TR1488,STS.WL,STS.FB,36,5744,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,g2r1X2pNOWg
+SANTOS,TR1489,STS.TO,STS.FB,36,,,Tubo 1 e 2,,9,indisponivel no momento,,Swy3jnmmtIk
+SANTOS,TR16,STS.AB,CAO.JC,12,6968,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,ns3feXGefDw
+SANTOS,TR18,STS.PP,STS.FB,36,2036,,,,12,indisponivel no momento,,9qc9vQCxN88
+SANTOS,TR21,STS.WL,STS.TO,36,1390,,,,15,indisponivel no momento,,Yg_Dq23drZo
+SANTOS,TR23,STS.PT,STS.WL,36,3000,,,,31,indisponivel no momento,,0v62pe0YN_s
+SANTOS,TR39,STS.AB,CAO.JC,72,8239,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,qC3h4lclHJo
+SANTOS,TR42,STS.AB,SVE.JR,36,5323,,,,23,indisponivel no momento,,WR-x-PeqW4I
+SANTOS,TR43,STS.CP,STS.PT,36,5107,,,,34,indisponivel no momento,,bvrWdgVCvZ8
+SANTOS,TR50,STS.WL,STS.PP,36,3843,,,,45,indisponivel no momento,,VyMHpbUb3Jw
+SANTOS,TR65,STS.JM,STS.TO,36,2840,,,,11,indisponivel no momento,,MLC01fO2Mxo
+SANTOS,TR66,STS.TO,STS.PP,36,3847,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,YXN1Z7K2ACk
+SANTOS,TR67,STS.WL,SNE.SA,72,66857,37-72,,,44,https://www.google.com/maps/d/edit?mid=1_oHU0FJBqiLgvaVLq9yyPY-KbS6D2mE&usp=sharing,,Vk_Oz-VSZrY
+SANTOS,TR98,STS.CP,STS.PT,72,5150,,,,11,indisponivel no momento,,WzQU2JcVSe0
+SANTOS,TR99,STS.AB,STS.CP,72,2103,,,,71,indisponivel no momento,,flA7t-Rp224
+SAO VICENTE,TR90,SVE.PD,SVE.IM,72,12622,,01/02 - 0304 - 25/26,,55,indisponivel no momento,,i8hchx6_8ZM
+SAO VICENTE,TR36,SVE.JR,SVE.IN,36,2012,,,,25,indisponivel no momento,,Jl8jJhsji-I
+SAO VICENTE,TR101,SVE.JR,SVE.IN,144,2101,,,,55,indisponivel no momento,,OUx3TSGVX4E
+SAO VICENTE,TR89,SVE.JR,SVE.IM,72,3808,,,,Cabo não encontrado na Monitoração,indisponivel no momento,,A1px9NNjJ4E
+SAO VICENTE,TR96,SVE.IM,SVE.IN,144,5744,,,,14,indisponivel no momento,,F_tUYC8kZoQ
+SAO VICENTE,TR100,SVE.IN,STS.AB,144,3104,,,,36,indisponivel no momento,,JYyxhawiYvo
+SAO VICENTE,TR107,SVE.JR,SVE.JP,72,4134,,,,,indisponivel no momento,,idbVUz32nRY
+SAO VICENTE,TR54,SVE.JR,STS.WL,36,8490,,,,3,indisponivel no momento,,Kkp_wojxbJg
+SAO VICENTE,TR111,SVE.JR,STS.WL,72,8723,,,Contagem de 37 - 72 está parando na galeria ,50,indisponivel no momento,,OT-XAMso9jg
+SAO VICENTE,TR01,SVE.JR,STS.WL,36,8123,,,,6,indisponivel no momento,,ZUNt1DOIPuI
+SAO VICENTE ,TR1481,SVE.PD,SVE.ST,72,,,1;2,,50,indisponivel no momento,,ohs6CQ_ENoE
+TELXIUS,TR93,TWIS,PGE.VC,72,1490,,,,6,indisponivel no momento,dF0LMXXJPto,yXMB4XeOSnw
+TELXIUS,TR68,TWIS,PGE.VC,36,1261,01 - 36,,05/06,,indisponivel no momento,W7Ry-yhA09s,bTh0aQbwx_U
+TELXIUS,TR69,TWIS,PGE.VC,36,1475,37 - 72,65/66/67/68/69/70/71/72 DESATIVADO,41/42,,indisponivel no momento,Bc0rf9PJhFw,T-2TvFBEHBc
+TELXIUS,TR94,TWIS,PGE.VC,72,1293,,,,,indisponivel no momento,uG4YCp4NDBU,CfFbi3J9wMY
+PRAIA GRANDE,TR60,PGE.VC,PUE.PA,,,,DWDM 0002.0 (HUAWEI) PGE. VC / PUE. PA  (SALA VELHA) Identificação 4124  D: FL.1A / BT. 42-46 / SUB.1 / SLOT 05 ENTRADAS/SAÍDAS P: FL.?   CABO 60 FB. 48 / 66,,,indisponivel no momento,,pZUR8YWxo88
+PEDRO DE TOLEDO ,TR78,PDT.RJ,PDT.RD,6,,,,Enviado para melhoria,,indisponivel no momento,,GhQw52hKLFs
+GUARUJA,A001,GJA.VC,GJA.GKV,,,,,,,https://www.google.com/maps/d/edit?mid=19GBsVVG7NezT_Z1xa0kmidvoGvaKllA&usp=sharing,,uOnQ14cLI-Y
+ITANHAÉM ,22,INE.BC,INE.RD,12,,,,,12,,,2WFsxhiYznc
+SAO VICENTE,TR12,SVE.PD,SVE.ST,12,,,,,12,,,97xfnl_ytmM
+SAO VICENTE ,29,SVE.PD,SVE.ST,12,,,,,12,,,bM_bzU4h5Ig
+Santos,2741,STS.NC,STS.JM,24,,,,,12,,,LkVhEy0u77g

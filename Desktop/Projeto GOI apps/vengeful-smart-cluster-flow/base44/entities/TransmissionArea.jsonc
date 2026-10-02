@@ -1,0 +1,27 @@
+{
+  "name": "TransmissionArea",
+  "type": "object",
+  "properties": {
+    "cluster_key": {
+      "type": "string",
+      "description": "Reference to Cluster key"
+    },
+    "sigla": {
+      "type": "string",
+      "description": "AT abbreviation code"
+    },
+    "name": {
+      "type": "string",
+      "description": "AT full name"
+    },
+    "order": {
+      "type": "number",
+      "description": "Display order within cluster"
+    }
+  },
+  "required": [
+    "cluster_key",
+    "sigla",
+    "name"
+  ]
+}
