@@ -724,18 +724,18 @@ export function CalculadorTrechoParalelo({ rota, subTrechoRange, onSubTrechoChan
           />
         </div>
 
-        {/* CARDS: CORTE (SINCRONIZADO COM CURSOR) E TOTAL */}
+        {/* CARDS: CORTE (SINCRONIZADO COM O PONTO INTERMEDIÁRIO) E TOTAL */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           {/* Card 1: CORTE */}
-          <div className="p-4 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border-2 border-cyan-300 dark:border-cyan-700 space-y-1 shadow-xs">
+          <div className="p-4 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border-2 border-cyan-400 dark:border-cyan-600 space-y-1 shadow-xs transition-all">
             <span className="text-xs font-extrabold text-cyan-800 dark:text-cyan-300 block uppercase tracking-wider flex items-center gap-1.5">
-              <span>🧵 CORTE (CURSOR)</span>
+              <span>🧵 CORTE (PONTO INTERMEDIÁRIO)</span>
             </span>
             <span className="text-2xl font-extrabold text-cyan-900 dark:text-cyan-100 font-mono block">
               {localKm.toFixed(2).replace('.', ',')} km
             </span>
             <span className="text-xs text-cyan-700 dark:text-cyan-400 block font-medium">
-              Valor da Régua: {Math.round(localKm * 1000).toLocaleString('pt-BR')} m ({pctCorte}% da trilha)
+              Distância da Ponta A: {Math.round(localKm * 1000).toLocaleString('pt-BR')} m ({pctCorte}% do percurso total)
             </span>
           </div>
 
