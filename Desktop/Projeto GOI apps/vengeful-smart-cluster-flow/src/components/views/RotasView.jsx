@@ -710,11 +710,66 @@ export function CalculadorTrechoParalelo({ rota, subTrechoRange, onSubTrechoChan
             type="range"
             min="0"
             max={distTotal}
-            step="0.05"
+            step="0.01"
             value={currentKm}
             onChange={(e) => handleSliderChange(Number(e.target.value))}
             className="w-full accent-cyan-600 cursor-pointer"
           />
+        </div>
+
+        {/* CARDS COM CÁLCULOS PARALELOS EM TEMPO REAL: PONTA A, PONTA B, CORTE, TOTAL */}
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-2">
+          {/* Card 1: PONTA A */}
+          <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 space-y-1 shadow-2xs">
+            <span className="text-[11px] font-extrabold text-emerald-800 dark:text-emerald-300 block uppercase tracking-wider">
+              🟢 PONTA A
+            </span>
+            <span className="text-lg font-extrabold text-emerald-900 dark:text-emerald-100 font-mono block">
+              {distAtePontoX.toFixed(2).replace('.', ',')} km
+            </span>
+            <span className="text-[10px] text-emerald-700 dark:text-emerald-400 block font-medium">
+              Valor Inicial ( {pctPontoX} % do total )
+            </span>
+          </div>
+
+          {/* Card 2: PONTA B */}
+          <div className="p-3.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 space-y-1 shadow-2xs">
+            <span className="text-[11px] font-extrabold text-rose-800 dark:text-rose-300 block uppercase tracking-wider">
+              🔴 PONTA B
+            </span>
+            <span className="text-lg font-extrabold text-rose-900 dark:text-rose-100 font-mono block">
+              {distPontoXAteB.toFixed(2).replace('.', ',')} km
+            </span>
+            <span className="text-[10px] text-rose-700 dark:text-rose-400 block font-medium">
+              Valor Final ( {(100 - pctPontoX).toFixed(1).replace('.', ',')} % do total )
+            </span>
+          </div>
+
+          {/* Card 3: CORTE */}
+          <div className="p-3.5 rounded-xl bg-cyan-50 dark:bg-cyan-950/40 border border-cyan-200 dark:border-cyan-800 space-y-1 shadow-2xs">
+            <span className="text-[11px] font-extrabold text-cyan-800 dark:text-cyan-300 block uppercase tracking-wider">
+              🧵 CORTE
+            </span>
+            <span className="text-lg font-extrabold text-cyan-900 dark:text-cyan-100 font-mono block">
+              {distAtePontoX.toFixed(2).replace('.', ',')} km
+            </span>
+            <span className="text-[10px] text-cyan-700 dark:text-cyan-400 block font-medium">
+              Valor da Régua ( {Math.round(distAtePontoX * 1000).toLocaleString('pt-BR')} m )
+            </span>
+          </div>
+
+          {/* Card 4: TOTAL */}
+          <div className="p-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 space-y-1 shadow-2xs">
+            <span className="text-[11px] font-extrabold text-slate-600 dark:text-slate-300 block uppercase tracking-wider">
+              📏 TOTAL
+            </span>
+            <span className="text-lg font-extrabold text-slate-900 dark:text-white font-mono block">
+              {distTotal.toFixed(2).replace('.', ',')} km
+            </span>
+            <span className="text-[10px] text-slate-500 block font-medium">
+              Valor Total da Trilha ( {Math.round(distTotal * 1000).toLocaleString('pt-BR')} m )
+            </span>
+          </div>
         </div>
       </div>
     </div>
